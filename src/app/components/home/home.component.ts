@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   myVariable =''
-  myDisabledValue =false
+  myDisabledValue =true
   constructor() { 
    
     setInterval(()=>{
@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.myVariable =''
-    this.myDisabledValue =false
+    this.myDisabledValue =true
   }
 
   toggleInput(){
