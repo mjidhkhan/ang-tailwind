@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { TwowayComponent } from './components/twoway/twoway.component';
 import { ModelBindingComponent } from './components/model-binding/model-binding.component';
 import { ForLoopComponent } from './components/for-loop/for-loop.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ForLoopComponent } from './components/for-loop/for-loop.component';
     TwowayComponent,
     ModelBindingComponent,
     ForLoopComponent,
+    NavbarComponent,
    
   ],
   imports: [
