@@ -15,41 +15,7 @@
 
 	<!-- End -->
 	
-	<!-- *ngFor Start-->
-	<div class=" mt-10 p-0 bg-gray-700">
-		<p class="title bg-gray-700 py-5 px-5 text-xl bg-gray-800 text-white">*ngFor</p>
-		<p class="component-title py-2 px-4">Using [(*ngFor)]</p>
-		<div  class="antialiased text-gray-800">
-		<div class=" flex bg-white overflow-hidden  lg:max-w-full ">
-			<!-- Data Cards -->
-		<div class="max-auto ">
-			<div class="flex flex-wrap pb-12">
-				<div *ngFor="let item of items"  class=" items-center justify-center mt-6 w-full 
-							px-4 sm:w-1/2 lg:w-1/2 xl:w-1/4 ">
-						 <!-- Data Start -->
-							<div>
-								<div class="relative pb-5/6">
-									<img class=" p-5 h-full w-full object-cover 
-												bg-gray-700 rounded-lg shadow-md" 
-										src="{{ item.icon }}" 
-										alt="{{ item.name }}"
-									/>
-								</div>
-								<div class="relative0 px-4 -mt-16">
-									<div class="bg-gray-700 p-6 rounded-lg shadow-lg  opacity-100 ">
-										<h4 class="mt-12 font-semibold text-lg leading-tight text-white 
-												truncate ">
-												{{ item.name }}
-										</h4>
-									</div>
-								</div>
-							</div>
-						 <!-- Data End -->
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- *ngFor End-->
+	
 
 
 

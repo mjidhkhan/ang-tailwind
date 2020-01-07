@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { TwowayComponent } from './components/twoway/twoway.component';
 import { ModelBindingComponent } from './components/model-binding/model-binding.component';
+import { ForLoopComponent } from './components/for-loop/for-loop.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ModelBindingComponent } from './components/model-binding/model-binding.
     HomeComponent,
     TwowayComponent,
     ModelBindingComponent,
+    ForLoopComponent,
    
   ],
   imports: [
