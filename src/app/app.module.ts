@@ -11,6 +11,8 @@ import { TwowayComponent } from './components/twoway/twoway.component';
 import { ModelBindingComponent } from './components/model-binding/model-binding.component';
 import { ForLoopComponent } from './components/for-loop/for-loop.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { MetricComponent } from './components/metric/metric.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     ModelBindingComponent,
     ForLoopComponent,
     NavbarComponent,
+    DashboardComponent,
+    MetricComponent,
    
   ],
   imports: [
