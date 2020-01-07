@@ -1,0 +1,17 @@
+
+<div class="p-2 bg-gray-700">
+	<p class="component-title py-2 px-4">Home Component</p>
+	<p class="py-2 px-4">
+		<input class="bg-white rounded-sm py-2 px-4 block w-full font-light leading-normal" 
+			type="text" value="{{ myVariable }}"
+			[ngClass]="myDisabledValue ? 'bg-gray-200 focus:outline-none focus:shadow-outline'
+					: 'focus:outline-none border-none appearance-none select-none bg-gray-700'"/>
+		<button class="btn hover:bg-gray-500 text-white bg-gray-800 mt-10 tracking-widest text-md" 
+				(click)="toggleInput()"> Click Me 
+		</button>
+	</p> 
+</div>
+  
+
+
+

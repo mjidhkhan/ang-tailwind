@@ -1,24 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap&subset=cyrillic,cyrillic-ext,latin-ext');
 
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
-.container {padding: 10px;}
-.title {
-	font-size: 1.5rem;
-	padding: 5px;
-	margin-bottom: 5px;
-	font-weight: 300;
-	
-}
-.component-title{
-	font-size: 1.5rem;
-	padding: 5px;
-	margin-bottom: 5px;
-	font-weight: 200;
-}
+@import './custom/tailwind.css'; 
+
 @import 'tailwindcss/utilities';
-body{
-	background-color: #eee;
-	font-family: 'Oswald', sans-serif;
-}
