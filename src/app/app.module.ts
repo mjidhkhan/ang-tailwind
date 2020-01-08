@@ -13,7 +13,7 @@ import { ForLoopComponent } from './components/for-loop/for-loop.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { MetricComponent } from './components/metric/metric.component';
-import { ObjectivesComponent } from './components/objectives/objectives.component';
+import { TopicsComponent } from './components/topics/topics.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import { ObjectivesComponent } from './components/objectives/objectives.componen
     NavbarComponent,
     DashboardComponent,
     MetricComponent,
-    ObjectivesComponent,
+    TopicsComponent,
    
   ],
   imports: [

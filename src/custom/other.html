@@ -1,0 +1,61 @@
+<div class=" mt-10 p-0 bg-gray-700">
+	<p class="title bg-gray-700 py-5 px-5 text-xl bg-gray-800 text-white text-gray-500">Learning Angular with Tailwindcss</p>
+    <p class="component-title py-2 px-4 text-gray-500 bg-gray-700">Topics</p>
+	<div  class="antialiased text-gray-800">
+	<div class=" flex bg-gray-300 overflow-hidden  lg:max-w-full ">
+		<!-- Data Cards -->
+	<div class="max-auto ">
+		<div class="flex flex-wrap pb-12">
+				<!-- Data Start -->
+					<div *ngFor="let topic of topics" 
+							class=" items-center justify-center mt-6 w-full px-4">
+						<div class="flex items-center rounded-lg bg-white shadow-lg overflow-hidden ">
+							<img class="p-10 h-40 w-1/2 md:object-cover  sm:object-cover
+										sm:object-center md:object-center  flex-shrink-0 h-full" 
+								[src]="topic.img " 
+								[alt]="topic.name">
+							<div class="px-6 py-4">
+								<h4 class="mt-20 font-semibold text-lg leading-tight 
+										text-gray-700 truncate">
+									{{ topic.name }}
+								</h4>
+								<div class="mt-4 ">
+									<div *ngFor="let title of topic.titles"class="text-gray-600  ">
+										<a href="/{{  title.title_1 }} " 
+											class="text-indigo-500 hover:text-indigo-400 font-semibold text-sm">
+											{{  title.title_1 }} 
+										</a>
+										<a href="/{{  title.title_2 }} " 
+											class="text-indigo-500 hover:text-indigo-400 font-semibold text-sm">
+											{{  title.title_2 }} 
+										</a>
+										<a href="{{  title.title_3 }} " 
+											class="text-indigo-500 hover:text-indigo-400 font-semibold text-sm">
+											{{  title.title_3 }} 
+										</a>
+										<a href="/{{  title.title_4 }} " 
+											class="text-indigo-500 hover:text-indigo-400 font-semibold text-sm">
+											{{  title.title_4 }} 
+										</a>
+										<a href="/{{  title.title_5 }} " 
+											class="text-indigo-500 hover:text-indigo-400 font-semibold text-sm">
+											{{  title.title_5 }} 
+										</a>
+										<a href="/{{  title.title_6 }} " 
+											class="text-indigo-500 hover:text-indigo-400 font-semibold text-sm">
+											{{  title.title_6 }} 
+										</a>
+										<a href="/{{  title.title_7 }} " 
+											class="text-indigo-500 hover:text-indigo-400 font-semibold text-sm">
+											{{  title.title_7 }} 
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					<div>
+				<!-- Data End -->
+		</div>
+	</div>
+</div>
+<!-- *ngFor End-->
