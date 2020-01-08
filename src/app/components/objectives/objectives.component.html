@@ -1,4 +1,42 @@
-<div class="mt-10 p-0 bg-gray-300">
+<!-- *ngFor Start-->
+<div class=" mt-10 p-0 bg-gray-300">
 	<p class="title bg-gray-700 py-5 px-5 text-xl bg-gray-800 text-white text-gray-500">Learning Angular with Tailwindcss</p>
-	<p class="component-title py-2 px-4 text-indigo-700">Objectives</p>
+    <p class="component-title py-2 px-4 text-indigo-700">Objectives</p>
+	<div  class="antialiased text-gray-800">
+	<div class=" flex bg-gray-300 overflow-hidden  lg:max-w-full ">
+		<!-- Data Cards -->
+	<div class="max-auto ">
+		<div class="flex flex-wrap pb-12">
+			<div *ngFor="let objective of objectives"  class=" items-center justify-center mt-6 w-full 
+						px-4 sm:w-1/2 lg:w-1/2 xl:w-1/2 ">
+				<!-- Data Start -->
+					
+						<div class="relative pb-1/6">
+							<img class=" p-5 h-full w-full object-cover 
+										bg-gray-500 rounded-lg shadow-md" 
+								[src]="objective.icon " 
+								[alt]="objective.name"
+							/>  <!-- Property binding -->
+							
+						</div>
+						<div class="relative0 px-8 -mt-20">
+							<div class="bg-gray-300 p-3 rounded-lg shadow-lg  opacity-100  w-full">
+								<h4 class="mt-20 text-right font-semibold text-lg leading-tight 
+									text-gray-500 truncate">
+										{{ objective.name }}
+								</h4>
+                                <div  class=" items-center justify-center mt-6 w-full
+                                px-4 sm:w-1/2 lg:w-1/2 xl:w-1/2">
+								    <p *ngFor="let topic of covers"class="text-gray-500  ">
+                                        {{ topic }}
+                                    </p>
+                                </div>
+							</div>
+						</div>
+						
+				<!-- Data End -->
+			</div>
+		</div>
+	</div>
 </div>
+<!-- *ngFor End-->
