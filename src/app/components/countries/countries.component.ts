@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 import {Country} from '../../classes/country'
 import {CountryService} from '../../service/country.service'
 
@@ -9,17 +10,23 @@ import {CountryService} from '../../service/country.service'
   styleUrls: ['./countries.component.scss']
 })
 export class CountriesComponent implements OnInit {
+  private _jsonURL = '../../../custom/data.json'
   selectedCountry: Country;
 
   countries : Country[];
 
-  constructor(private countryService : CountryService) { }
+  constructor(private countryService: CountryService) {
+    
+  }
+  
+  
 
   ngOnInit() {
     this.getCountries();
   }
 
-  onSelected(country: Country): void {
+  onClick(country: Country): void {
+    console.log(country)
     this.selectedCountry = country;
   }
   getCountries():void {
