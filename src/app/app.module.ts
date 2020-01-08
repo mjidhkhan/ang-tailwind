@@ -14,6 +14,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { MetricComponent } from './components/metric/metric.component';
 import { TopicsComponent } from './components/topics/topics.component';
+import { CountriesComponent } from './components/countries/countries.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { TopicsComponent } from './components/topics/topics.component';
     DashboardComponent,
     MetricComponent,
     TopicsComponent,
+    CountriesComponent,
    
   ],
   imports: [
