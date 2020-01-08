@@ -1,15 +1,15 @@
 <!-- *ngFor Start-->
-	<div class=" mt-10 p-0 bg-gray-700">
-		<p class="title bg-gray-700 py-5 px-5 text-xl bg-gray-800 text-white text-gray-500">*ngFor</p>
-		<p class="component-title py-2 px-4 text-gray-500">Using [(*ngFor)]</p>
-		<div  class="antialiased text-gray-800">
+<div class=" mt-10 p-0 bg-gray-700">
+	<p class="title bg-gray-700 py-5 px-5 text-xl bg-gray-800 text-white text-gray-500">*ngFor</p>
+	<p class="component-title py-2 px-4 text-gray-500">Using [(*ngFor)]</p>
+	<div  class="antialiased text-gray-800">
 		<div class=" flex bg-gray-500 overflow-hidden  lg:max-w-full ">
 			<!-- Data Cards -->
-		<div class="max-auto ">
-			<div class="flex flex-wrap pb-12">
-				<div *ngFor="let item of items"  class=" items-center justify-center mt-6 w-full 
-							px-4 sm:w-1/2 lg:w-2/4 xl:w-1/3 ">
-					<!-- Data Start -->
+			<div class="max-auto ">
+				<div class="flex flex-wrap pb-12">
+					<div *ngFor="let item of items"  class=" items-center justify-center mt-6 w-full 
+								px-4 sm:w-1/2 lg:w-2/4 xl:w-1/3 ">
+						<!-- Data Start -->
 						<div>
 							<div class="relative pb-5/6">
 								<img class=" p-5 h-full w-24 object-cover 
@@ -18,19 +18,22 @@
 									[alt]="item.name"
 								/>  <!-- Property binding -->
 							</div>
-								<div class="relative0 px-8 -mt-20">
-									<div class="bg-gray-700 p-3 rounded-lg shadow-lg  opacity-100 ">
-										<h4 class="font-semibold text-lg leading-tight 
-											text-gray-500 truncate  text-right">
-												{{ item.name }}
-										</h4>
-										<p class="text-gray-500  text-right text-sm">Property binding</p>
-									</div>
+							<div class="relative0 px-8 -mt-20">
+								<div class="bg-gray-700 p-3 rounded-lg shadow-lg  opacity-100 ">
+									<h4 class="font-semibold text-lg leading-tight 
+										text-gray-500 truncate  text-right">
+											{{ item.name }}
+									</h4>
+									<p class="text-gray-500  text-right text-sm">Property binding</p>
 								</div>
 							</div>
-					<!-- Data End -->
+						</div>
+						<!-- Data End -->
+					</div>
 				</div>
 			</div>
+			<!-- DataCard end-->
 		</div>
 	</div>
-	<!-- *ngFor End-->
+</div>
+<!-- *ngFor End-->

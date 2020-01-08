@@ -59,3 +59,47 @@
 	</div>
 </div>
 <!-- *ngFor End-->
+
+
+
+
+
+
+<!-- Topics Start-->
+<div class=" mt-10 p-0 bg-gray-700">
+	<p class="title bg-gray-700 py-5 px-5 text-xl bg-gray-800 text-white text-gray-500">Learning Angular with Tailwindcss</p>
+    <p class="component-title  px-4 text-gray-500 bg-gray-700">Topics</p>
+	<div  class="antialiased text-gray-800">
+		<!-- Data Cards -->
+		<div class="flex bg-gray-600 pb-5 pl-0  pt-1">
+			<!-- Data Start -->
+			<div *ngFor="let topic of topics" class=" w-full" > 
+				<div class=" px-0 bg-gray-700 border border-gray-700 ml-1 mr-1 ">
+				<div class="flex  overflow-hidden ">
+					
+					<img class="p-10 h-full w-1/2 md:object-cover  sm:object-cover bg-gray-200
+								sm:object-center md:object-center  flex-shrink-0 h-full" 
+						[src]="topic.img " 
+						[alt]="topic.name">
+					<div class="px-6 py-4">
+						<h4 class="mt-0 font-semibold text-lg leading-tight 
+								text-gray-600 truncate">
+							{{ topic.name }}
+						</h4>
+						<div class="mt-4 ">
+							<div *ngFor="let title of topic.titles"class="text-gray-600  ">
+								<a href="/{{title}} " 
+									class="text-gray-500 hover:text-gray-400 font-semibold text-sm">
+									{{  title }} 
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+			<div>
+			<!-- Data End -->
+		</div>
+	</div>
+</div>
+<!-- Topics End-->

@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import {Observable, of} from 'rxjs'
 
-import {Country} from '../'
-import {COUNTRIES} from './store/mock-countries'
+import {Country} from '../classes/country'
+import {COUNTRIES} from './mock-countries'
 
 @Injectable({
   providedIn: 'root'

@@ -1,4 +1,4 @@
-import {Country} from './classes/country'
+import {Country} from '../classes/country'
 
 export const COUNTRIES: Country[] = [
     {
