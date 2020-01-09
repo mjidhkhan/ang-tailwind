@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-
+myDisabledValue =true
   constructor() { }
 
   ngOnInit() {
+    this.myDisabledValue =true
+  }
+
+  toggleTopics(){
+        this.myDisabledValue = !this.myDisabledValue
   }
 
 }
