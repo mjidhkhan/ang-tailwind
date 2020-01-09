@@ -1,8 +1,8 @@
 <!-- Topics Start-->
-<div  class="antialiased  ">
+<div  class="antialiased0  ">
 	<div class=" mt-10 p-0 bg-gray-700">
 		<p class="title bg-gray-700 py-5 px-5 text-xl bg-gray-800 text-white text-gray-500">Learning Angular with Tailwindcss</p>
-	    <p class="component-title  px-4 text-gray-500 bg-gray-700">Topics</p>
+	    <p class="component-title py-2 px-4 text-gray-500">Topics to Learn</p>
 			<!-- Data Cards -->
 		<div class="flex  pt-0 ">
 			<!-- Data Start -->
@@ -10,14 +10,14 @@
 				<div  class="antialiased  ml-1 mr-1">
 					<div class=" flex  overflow-hidden  lg:max-w-full border border-gray-700 bg-gray-700">
 						<div class="px-8 py-12 max-w-md mx-auto">
-							<div class="xl:max-w-lg xl:ml-auto block bg-gray-700 -mt-20">
+							<div class="ml-auto block bg-gray-700 -mt-10">
 								<!-- img class=" mt-6  sm:mt-8 sm:h-72 p-0 
 											sm:w-full sm:object-cover sm:object-center  lg:hidden" 
 											[src]="topic.img " 
 											[alt]="topic.name" -->
-								<div class="mt-4">
-									<h4 class="title bg-gray-700 py-5 px-5 text-xl bg-gray-800 text-white text-gray-500
-											mt-0 font-semibold text-lg leading-tight truncate">
+								<div class="mt-4 mt-1">
+									<h4 class="title bg-gray-700 py-5 px-5 text-xl bg-gray-800 text-gray-500
+												font-semibold text-lg leading-tight truncate">
 										{{ topic.name }}
 									</h4>
 									<div *ngFor="let title of topic.titles; index as title_id"
