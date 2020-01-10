@@ -11,7 +11,7 @@ export class MetricComponent implements OnInit{
   @Input() title: string = ''
   @Input() description: string =''
   private _value: number = 0;
-  private _value:number = 100;
+  private _max: number = 100;
   @Input('used')
   set value(value: number){
     if(isNaN(value)) value = 0;
