@@ -10,7 +10,6 @@ import {CountryService} from '../../service/country.service'
   styleUrls: ['./countries.component.scss']
 })
 export class CountriesComponent implements OnInit {
-  private _jsonURL = '../../../custom/data.json'
   selectedCountry: Country;
 
   countries : Country[];
