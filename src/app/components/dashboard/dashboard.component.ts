@@ -19,7 +19,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
       mem: Metric
       cluster1: Node[]
       cluster2: Node[]
-      cluster3: Node[]
+     
       interval: any
       constructor() { }
 
@@ -35,13 +35,12 @@ export class DashboardComponent implements OnInit, OnDestroy {
       generateData():void {
         this.cluster1 = [];
         this.cluster2 = [];
-        this.cluster3 = [];
         this.cpu = {used: 0, available: 0};
         this.mem = {used: 0, available: 0};
 
-        for (let i = 1; i < 3; i++) this.cluster1.push(this.randomNode(i));
-        for (let i = 3; i < 5; i++) this.cluster1.push(this.randomNode(i));
-        for (let i = 5; i < 7; i++) this.cluster1.push(this.randomNode(i));
+        for (let i = 1; i < 4; i++) this.cluster1.push(this.randomNode(i));
+        for (let i = 4; i < 7; i++) this.cluster2.push(this.randomNode(i));
+        
       }
 
       private randomNode(i): Node {

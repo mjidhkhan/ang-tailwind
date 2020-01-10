@@ -14,7 +14,7 @@
 					<div class="pb-6 pt-6 ml-2 mr-4">
 						<div class=" w-full bg-gray-400">
 							<div class="bg-green-600 text-xs leading-none py-1 text-center text-white" 
-								style="width: ({{value / max | percent: '1.0-2'}})">({{value / max | percent: '1.0-2'}})
+								[ngStyle]="{'width': value / max| percent: '1.0-2' }">{{value / max | percent: '1.0-2'}}
 							</div>
 						</div>
 						
