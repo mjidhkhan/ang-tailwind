@@ -16,6 +16,7 @@ import { MetricComponent } from './components/metric/metric.component';
 import { TopicsComponent } from './components/topics/topics.component';
 import { CountriesComponent } from './components/countries/countries.component';
 import { NodesComponent } from './components/nodes/nodes.component';
+import { NodesRowComponent } from './components/nodes-row/nodes-row.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { NodesComponent } from './components/nodes/nodes.component';
     TopicsComponent,
     CountriesComponent,
     NodesComponent,
+    NodesRowComponent,
    
   ],
   imports: [
