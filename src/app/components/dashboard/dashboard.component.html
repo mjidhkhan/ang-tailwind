@@ -1,178 +1,38 @@
-<!-- 
-<div class="start"> 
-	<div  class="antialiased text-gray-800 bg-gray-500">
-		<div class=" flex bg-white overflow-hidden  lg:max-w-full ">
-			<div class="px-8 py-12 max-w-md mx-auto sm:max-w-xl 
-						lg:max-w-full lg:w-1/2 lg:py-24 lg:px-12 ">
-				<div class="xl:max-w-lg xl:ml-auto">
-					<img class="h-10" 
-						src="/assets/img/logo.svg" 
-						alt="Workcation">
-					<img class="mt-6 rounded-lg shadow-xl sm:mt-8 sm:h-72  
-								sm:w-full sm:object-cover sm:object-center lg:hidden" 
-								src="/assets/img/beach-work.jpg" 
-								alt="Woman workcationing on the beach">
-					<h1 class="mt-2 text-lg font-bold text-gray-800 leading-tight  
-								sm:mt-8  sm:text-4xl lg:text-3xl xl:text-4xl">
-							You can work from anywhere.
-							<br class="sm:hidden lg:inline">
-							<span class="text-indigo-500">
-								Take advantage of it.
-							</span>
-					</h1>
-					<p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl">
-						Workcation helps you find work-friendly rentals in beautiful 
-						locations so you can enjoy some nice weather even when you're 
-						not on vacation.
-					</p>
-					<div class="mt-4 sm:mt-6">
-						<a href="#" class="btn btn-indigo shadow-lg sm:text-base">
-							Book your escape 
-						</a>
-					</div>
-					
+
+<!-- Admin -->
+<div class=" mt-10 p-0 bg-gray-700">
+	<p class="title bg-gray-700 py-5 px-5 text-xl bg-gray-800 text-white text-gray-500"> Dashboard Component</p>
+	<p class="component-title py-2 px-4 text-gray-500 z-1"> Dashboard Component </p>
+	<div class="flex bg-gray-600 pb-2">
+		<div class=" flex-1 py-0 px-4 block w-1/3pb-5 bg-gray-500 mr-1 ml-2 mt-2 text-gray-700 leading-normal">
+			<p class="py-2 px-0 text-xl"></p>
+			
+			  <div class="flex">
+				<div class="flex-1  pb-6">
+				 	<app-metric  
+					 [used] ="cpu.used" 
+					 [available] ="cpu.available"
+					 [title] ="'CPU'"
+					 [description] = "'utilization of CPU cores'">	
+					 </app-metric>
 				</div>
-			</div>
-			<div class="hidden lg:block lg:w-1/2 lg:relative 
-							sm:bg-gray-100 lg:bg-primary-200 bg-white">
-				<img class="absolute inset-0 h-full w-full object-cover object-center" 
-							src="/assets/img/beach-work.jpg " 
-							alt="Woman workcationing on the beach">
-			</div>
-		</div>
-	
-		<!-- Destination Card --
-		<div class="max-auto ">
-			<div class="bg-gray-100 pb-12 border-gray-200 border-solid border-t">
-					<h2 class="text-xl text-gray-800 px-8">Popular destinations</h2>
-					<p class="text-gray-600 px-8">
-						A selection of great work-friendly 
-						cities with lots to see and explore.
-					</p>
-			</div>
-			<div class="flex flex-wrap pb-12">
-				<div class="mt-6 w-full px-4 w-1/2 sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3"  
-							v-for="destination in destinations" 
-							:key="destination.id" >
+				<div class="flex-1">
+				 	<app-metric  
+					 [used] ="cpu.used" 
+					 [available] ="cpu.available"
+					 [title]="'Memory'"
+					 [description] ="'utilization of memory in GB'">
 						
-					<app-home></app-home>
-				</div>
-			</div>
+					 </app-metric>
+				 </div>
+			  </div>
 		</div>
-			<!-- Property Card --
-		<div class="max-auto ">
-			<div class="bg-gray-100 pb-12 border-gray-200 border-solid border-t">
-					<h2 class="text-xl text-gray-800 px-8">Rentials</h2>
-					<p class="text-gray-600 px-8">Available to rent at any time.</p>
-			</div>
-			<div class="flex flex-wrap pb-12">
-				<div class=" items-center justify-center mt-6 w-full 
-							px-4 sm:w-1/2 lg:w-1/2 xl:w-1/4 "  
-						v-for="property in properties" 
-						:key="property.id" >
-					<app-twoway></app-twoway>
-				</div>
-			</div>
+		<div class="flex-1 py-0 px-4 block w-1/3pb-5 bg-gray-500 ml-1 mr-2 mt-2 text-gray-700 leading-normal">
+			<p class="py-2 px-0 text-xl">Json Data</p>
+			<p class="py-2 px-0 text-justify">
+				{{cluster1 | json}}
+			</p>
+			 
 		</div>
 	</div>
 </div>
--->
-	
-	<div class=" pt-5 shadow-lg">
-		<div class="flex bg-gray-500 pb-5 pl-5 pr-5 pt-5">
-			<div class="sm:flex-auto md:flex-1 lg:flex-1 bg-gray-600 pb-5 pt-5 pl-5 pr-5">
-				<p class="title bg-gray-700 py-5 px-5 text-xl bg-gray-800 text-gray-500">{{ title }} Topics to Learn
-
-					<button class="btn hover:bg-gray-700  border  rounded-sm border-gray-700
-							bg-gray-800 tracking-widest   
-							text-white text-md float-right -mt-3" 
-							(click)="toggleTopics()"> Toggle (Topics) 
-					</button>
-				</p>	
-				
-				<app-topics *ngIf="toggleTopic"></app-topics>
-			</div>
-		</div>
-	</div>
-
-	<div class=" pt-1 shadow-lg">
-		<div class="flex bg-gray-500 pb-5 pl-5 pr-5 pt-5">
-			<div class="sm:flex-auto md:flex-1 lg:flex-1 bg-gray-600 pb-5 pt-5 pl-5 pr-5">
-				<p class="title bg-gray-700 py-5 px-5 text-xl bg-gray-800 text-gray-500">{{ title }} Interpolation
-					<button class="btn hover:bg-gray-700  border  rounded-sm border-gray-700
-							bg-gray-800 tracking-widest   
-							text-white text-md float-right -mt-3" 
-							(click)="toggleHome()"> Toggle (Home) 
-					</button>
-				</p>
-				<app-home *ngIf="toggleHom"></app-home>
-			</div>
-			<div class="sm:flex-auto md:flex-1 lg:flex-1 ml-2 bg-gray-600  pb-5 pt-5 pl-5 pr-5">
-				<p class="title  bg-gray-700 py-5 px-5 text-xl bg-gray-800 text-gray-500">{{ title }} Model Binding
-					<button class="btn hover:bg-gray-700  border  rounded-sm border-gray-700
-							bg-gray-800 tracking-widest   
-							text-white text-md float-right -mt-3" 
-							(click)="toggleBinding()"> Toggle (Model Binding) 
-					</button>
-				</p>
-				<app-model-binding *ngIf="toggleBindin"></app-model-binding>
-			</div>
-		</div>
-	</div>
-
-	<div class="pt-1 shadow-lg">
-		<div class="flex bg-gray-500 pb-5 pl-5 pr-5 pt-5">
-			<div class="sm:flex-auto md:flex-1 lg:flex-1 ml-2 bg-gray-600  pb-5 pt-5 pl-5 pr-5">
-				<p class="title  bg-gray-700 py-5 px-5 text-xl bg-gray-800 text-gray-500">{{ title }} Using *ngFor
-					<button class="btn hover:bg-gray-700  border  rounded-sm border-gray-700
-							bg-gray-800 tracking-widest   
-							text-white text-md float-right -mt-3" 
-							(click)="toggleLoop()"> Toggle (For Loop) 
-					</button>
-				</p>
-				<app-for-loop *ngIf="toggleLoo"></app-for-loop>
-			</div>
-			<div class="sm:flex-auto md:flex-1 lg:flex-1 ml-2 bg-gray-600  pb-5 pt-5 pl-5 pr-5">
-				<p class="title  bg-gray-700 py-5 px-5 text-xl bg-gray-800 text-gray-500">{{ title }} Tow way Data Binding
-					<button class="btn hover:bg-gray-700  border  rounded-sm border-gray-700
-							bg-gray-800 tracking-widest   
-							text-white text-md float-right -mt-3" 
-							(click)="toggleTwoWay()"> Toggle (Two Way) 
-					</button>
-				</p>
-				<app-twoway *ngIf="toggleTwoWa"></app-twoway>
-			</div>
-		</div>
-	</div>
-	<!-- Countries Data -->
-	<div class="pt-1 shadow-lg">
-		<div class="flex0 bg-gray-500 pb-5 pl-5 pr-5 pt-5">
-			<div class="sm:flex-1 md:flex-1 lg:flex-1 ml-2 bg-gray-600  pb-5 pt-5 pl-5 pr-5">
-				<p class="title  bg-gray-700 py-5 px-5 text-xl bg-gray-800 text-gray-500">{{ title }} Using Service
-					<button class="btn hover:bg-gray-700  border  rounded-sm border-gray-700
-							bg-gray-800 tracking-widest   
-							text-white text-md float-right -mt-3" 
-							(click)="toggleCountries()"> Toggle (Countries) 
-					</button>
-				</p>
-				<app-countries *ngIf="toggleCountry"></app-countries>
-			</div>
-			
-		</div>
-	</div>
-
-	<!-- Admin -->
-	<div class="pt-1 shadow-lg">
-		<div class="flex bg-gray-500 pb-5 pl-5 pr-5 pt-5">
-			<div class="sm:flex-auto md:flex-1 lg:flex-1 ml-2 bg-gray-600  pb-5 pt-5 pl-5 pr-5">
-				<p class="title  bg-gray-700 py-5 px-5 text-xl bg-gray-800 text-gray-500">{{ title }} Metric Data
-					<button class="btn hover:bg-gray-700  border  rounded-sm border-gray-700
-							bg-gray-800 tracking-widest   
-							text-white text-md float-right -mt-3" 
-							(click)="toggleMetric()"> Toggle (Metric) 
-					</button>
-				</p>
-				<app-metric *ngIf="toggleMetri"></app-metric>
-			</div>
-		</div>
-	</div>
