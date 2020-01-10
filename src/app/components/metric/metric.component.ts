@@ -14,7 +14,10 @@ export class MetricComponent implements OnInit{
   @Input('available') max: number = 100
 
   isDanger(){
-    return this.value / this.max > 0.7
+    return (this.value / this.max) > 0.8
+  }
+  isCritical(){
+    return (this.value / this.max) > 0.7
   }
     
   constructor() { }

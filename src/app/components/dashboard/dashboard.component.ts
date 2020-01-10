@@ -16,11 +16,10 @@ interface Node {
 })
 export class DashboardComponent implements OnInit, OnDestroy {
       cpu: Metric;
-      mem: Metric
-      cluster1: Node[]
-      cluster2: Node[]
-     
-      interval: any
+      mem: Metric;
+      cluster1: Node[];
+      cluster2: Node[];
+      interval: any;
       constructor() { }
 
       ngOnInit() {
@@ -41,7 +40,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
         for (let i = 1; i < 4; i++) this.cluster1.push(this.randomNode(i));
         for (let i = 4; i < 7; i++) this.cluster2.push(this.randomNode(i));
         
-      }
+      };
 
       private randomNode(i): Node {
         let node = {
@@ -49,12 +48,12 @@ export class DashboardComponent implements OnInit, OnDestroy {
           cpu: { available: 16 , used: this.randomInteger(0, 16)},
           mem: { available: 48 , used: this.randomInteger(0, 48)}
         };
-        this.cpu.used += node.cpu.used
-        this.cpu.available += node.cpu.available
-        this.mem.used += node.mem.used
-        this.mem.available += node.mem.available
+        this.cpu.used += node.cpu.used;
+        this.cpu.available += node.cpu.available;
+        this.mem.used += node.mem.used;
+        this.mem.available += node.mem.available;
         return node
-      }
+      };
 
       private randomInteger(min: number= 0 , max:number = 100): number {
         return Math.floor(Math.random()* max)+ 1
