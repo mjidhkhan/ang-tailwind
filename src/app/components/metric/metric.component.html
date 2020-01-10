@@ -1,6 +1,5 @@
 <div class=" mt-0 p-0 bg-gray-700">
 	<p class="title bg-gray-700 py-5 px-5 text-xl bg-gray-800 text-white text-gray-500"> Metric Component</p>
-	
 	<div class="flex bg-gray-600">
 		<div class=" flex-1 py-2 px-4 mt-2 pt-1 mt-1 py-2 px-4 block w-1/3  leading-normal  pb-5">
 			<p class="component-title py-2 px-4  bg-gray-700 text-gray-500"> 
@@ -9,10 +8,7 @@
 			<div class="rounded-t-lg border border-gray-600 bg-gray-500">
 				<div class="py-2 px-6 bg-green-800 rounded-t-lg text-white"
 					[ngClass]="{'bg-orange-800': isCritical(), 'bg-green-800': !isCritical(),
-								'bg-red-800': isDanger(), 'bg-green-800': !isDanger()}"
-					
-					
-				>
+								'bg-red-800': isDanger(), 'bg-green-800': !isDanger()}">
 					{{title}} 
 				</div>
 					<p class="py-2 px-6 text-gray-700 text-justify"> {{value}} / {{max}} ({{value / max | percent: '1.0-2'}})
@@ -24,11 +20,8 @@
 								[ngStyle]="{'width': value / max| percent: '1.0-2' }">{{value / max | percent: '1.0-2'}}
 							</div>
 						</div>
-						
 					</div>
-				
 			</div>	
 		</div>
-		
 	</div>
 </div>
