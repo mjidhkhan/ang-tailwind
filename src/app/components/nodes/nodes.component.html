@@ -13,24 +13,14 @@
 					    <th class="px-4 py-2">CPU</th>
 					    <th class="px-4 py-2" [class.table-danger]="isDanger('cpu')">Mempry</th>
 					    <th class="px-4 py-2">Details</th>
-						<th class="px-4 py-2">{{node.name}}</th>
+						
 					  </tr>
 					</thead>
 					<tbody>
-					  <tr>
-					    <td class="border px-4 py-2">
-							{{node.name}}
-						</td>
-					    <td class="border px-4 py-2" [class.table-danger]="isDanger('cpu')">
-							{{node.cpu.used}}/{{node.cpu.available}}
-						</td>
-					    <td class="border px-4 py-2">
-							858
-						</td>
 					  
 					</tbody>
 				</table>
-				<ng-content></ng-content>
+				
 			</div>	
 		</div>
 	</div>
