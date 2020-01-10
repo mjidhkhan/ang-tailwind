@@ -13,7 +13,8 @@ import { CountriesComponent } from './components/countries/countries.component';
 
 
 const routes: Routes = [
-  {path:'topics', component: TopicsComponent},
+  {path:'',  redirectTo: '/topics', pathMatch: 'full'},
+  { path: 'topics', component: TopicsComponent },
   {path:'home', component: HomeComponent},
   {path:'interpolation', component: TwowayComponent},
   {path:'binding', component: ModelBindingComponent},
