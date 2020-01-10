@@ -1,9 +1,11 @@
 <thead>
-<tr>
-  <th class="px-4 py-2">Node</th>
-  <th class="px-4 py-2">CPU</th>
-  <th class="px-4 py-2">Mempry</th>
-  <th class="px-4 py-2">Details</th>	
+<tr class="border border-gray-700  bg-gray-700 text-gray-500 ">
+  <th class="border-r border-b border-gray-500  px-4 py-2">Node</th>
+  <th class="border-r border-b border-gray-500  px-4 py-2"[colSpan]="2">CPU</th>
+  <th class="border-r border-b border-gray-500  px-4 py-2" [colSpan]="2">Mempry</th>
+  <th class="border-r border-b border-gray-700  px-4 py-2">Details</th>	
 </tr>
 </thead>
+<tbody>
 <ng-content></ng-content>
+</tbody>

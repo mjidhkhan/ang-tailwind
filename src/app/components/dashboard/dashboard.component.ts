@@ -44,7 +44,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
       private randomNode(i): Node {
         let node = {
-          name: 'node'+ i,
+          name: 'node-'+ i,
           cpu: { available: 16 , used: this.randomInteger(0, 16)},
           mem: { available: 48 , used: this.randomInteger(0, 48)}
         };

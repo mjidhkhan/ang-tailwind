@@ -8,8 +8,9 @@ import {ThrowStmt} from '@angular/compiler';
   styleUrls: ['./metric.component.scss']
 })
 export class MetricComponent implements OnInit{
-  @Input() title: string = ''
-  @Input() description: string =''
+  @Input() title: string
+  @Input() description: string
+  
   private _value: number = 0;
   private _max: number = 100;
   @Input('used')

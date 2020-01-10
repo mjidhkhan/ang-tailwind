@@ -1,7 +1,11 @@
-<th class="px-4 py-2">{{node.name}}</th>
-<td class="border px-4 py-2" [class.table-danger]="isDanger('cpu')">{{node.cpu.used}}/{{node.cpu.available}}</td>
-<td class="border px-4 py-2" [class.table-danger]="isDanger('cpu')">({{node.cpu.used / node.cpu.available | percent}})</td>
-<td class="border px-4 py-2" [class.table-danger]="isDanger('mem')">{{node.mem.used}}/{{node.mem.available}}</td>
-<td class="border px-4 py-2" [class.table-danger]="isDanger('mem')">({{node.mem.used / node.mem.available | percent}})</td>
-<td><button class="btn " (click)="open(node)">View</button></td>
-					  
+<th class="border-r border-b border-gray-500 px-4 py-2">{{node.name}}</th>
+<td class="border-b border-gray-500 px-4 py-2" [class.table-danger]="isDanger('cpu')">{{node.cpu.used}}/{{node.cpu.available}}</td>
+<td class="border-r border-b border-gray-500 px-4 py-2" [class.table-danger]="isDanger('cpu')">({{node.cpu.used / node.cpu.available | percent}})</td>
+<td class="border-b border-gray-500 px-4 py-2" [class.table-danger]="isDanger('mem')">{{node.mem.used}}/{{node.mem.available}}</td>
+<td class="border-r border-b border-gray-500 px-4 py-2" [class.table-danger]="isDanger('mem')">({{node.mem.used / node.mem.available | percent}})</td>
+<td class="border-b border-gray-500 px-4 py-2" >
+<button class="bg-indigo-400 pl-4 pr-4 pt-1 pb-1  hover:bg-indigo-300 hover:text-gray-300 text-gray-400  text-md" 
+		(click)="open(node)"> View
+    </button>
+
+</td>
