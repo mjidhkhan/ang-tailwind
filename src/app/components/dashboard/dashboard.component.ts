@@ -1,66 +1,64 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy } from "@angular/core";
 
 interface Metric {
-  used: number,
-  available: number
-};
+  used: number;
+  available: number;
+}
 interface Node {
-  name: string,
-  cpu: Metric,
-  mem: Metric
+  name: string;
+  cpu: Metric;
+  mem: Metric;
 }
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  selector: "app-dashboard",
+  templateUrl: "./dashboard.component.html",
+  styleUrls: ["./dashboard.component.scss"]
 })
 export class DashboardComponent implements OnInit, OnDestroy {
-      cpu: Metric;
-      mem: Metric;
-      cluster1: Node[];
-      cluster2: Node[];
-      cluster3: Node[];
-      
-      interval: any;
-      constructor() { }
+  cpu: Metric;
+  mem: Metric;
+  cluster1: Node[];
+  cluster2: Node[];
+  cluster3: Node[];
 
-      ngOnInit() {
-            this.generateData();
-            this.interval = setInterval(()=>{
-                  this.generateData();
-            }, 1500);
-      }
-      ngOnDestroy():void{
-            clearInterval(this.interval);
-      }
-      generateData():void {
-        this.cluster1 = [];
-        this.cluster2 = [];
-        this.cluster3 = [];
-        this.cpu = {used: 0, available: 0};
-        this.mem = {used: 0, available: 0};
+  interval: any;
+  constructor() {}
 
-        for (let i = 1; i < 5; i++) this.cluster1.push(this.randomNode(i));
-        for (let i = 5; i < 10; i++) this.cluster2.push(this.randomNode(i));
-        for (let i = 10; i < 16; i++) this.cluster3.push(this.randomNode(i));
-        
-      };
+  ngOnInit() {
+    this.generateData();
+    this.interval = setInterval(() => {
+      this.generateData();
+    }, 1500);
+  }
+  ngOnDestroy(): void {
+    clearInterval(this.interval);
+  }
+  generateData(): void {
+    this.cluster1 = [];
+    this.cluster2 = [];
+    this.cluster3 = [];
+    this.cpu = { used: 0, available: 0 };
+    this.mem = { used: 0, available: 0 };
 
-      private randomNode(i): Node {
-        let node = {
-          name: 'node-'+ i,
-          cpu: { available: 16 , used: this.randomInteger(0, 16)},
-          mem: { available: 48 , used: this.randomInteger(0, 48)}
-        };
-        this.cpu.used += node.cpu.used;
-        this.cpu.available += node.cpu.available;
-        this.mem.used += node.mem.used;
-        this.mem.available += node.mem.available;
-        return node
-      };
+    for (let i = 1; i < 5; i++) this.cluster1.push(this.randomNode(i));
+    for (let i = 5; i < 10; i++) this.cluster2.push(this.randomNode(i));
+    for (let i = 10; i < 16; i++) this.cluster3.push(this.randomNode(i));
+  }
 
-      private randomInteger(min: number= 0 , max:number = 100): number {
-        return Math.floor(Math.random()* max)+ 1
-      }
- 
+  private randomNode(i): Node {
+    let node = {
+      name: "node-" + i,
+      cpu: { available: 16, used: this.randomInteger(0, 16) },
+      mem: { available: 48, used: this.randomInteger(0, 48) }
+    };
+    this.cpu.used += node.cpu.used;
+    this.cpu.available += node.cpu.available;
+    this.mem.used += node.mem.used;
+    this.mem.available += node.mem.available;
+    return node;
+  }
+
+  private randomInteger(min: number = 0, max: number = 100): number {
+    return Math.floor(Math.random() * max) + 1;
+  }
 }
