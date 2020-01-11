@@ -1,58 +1,71 @@
 
 <!-- Admin -->
 <div class=" h-screen h-full mt-10 p-0 bg-gray-700">
-	<p class="title bg-gray-700 py-5 px-5 text-xl bg-gray-800 text-white text-gray-500  "> Dashboard Component</p>
+	<p class="title bg-gray-700 py-5 px-5 text-xl 
+				bg-gray-800 text-white text-gray-500  "> 
+			Dashboard Component
+	</p>
 	<p class="component-title py-2 px-4 text-gray-500 z-1"> Data Center </p>
 	<div class="flex bg-gray-600 pb-2">
-		<div class=" flex-1 py-0 px-4 block w-1/3pb-5 bg-gray-500 mr-1 ml-2 mt-2 text-gray-700 leading-normal">
+		<div class=" flex-1 py-0 px-4 block w-1/3pb-5 
+						bg-gray-500 mr-1 ml-2 mt-2 text-gray-700 
+						leading-normal">
 			<p class="py-2 px-0 text-xl"></p>
-			
-			  <div class="flex">
+			<div class="flex">
 				<div class="flex-1  pb-6">
-				 	<app-metric  
-					 [used] ="cpu.used" 
-					 [available] ="cpu.available">
-					 <metric-title>CPU</metric-title>
-  					<metric-description class="font-light"><br>utilization of CPU cores</metric-description>	
-					 </app-metric>
+					<app-metric  
+						[used] ="cpu.used" 
+						[available] ="cpu.available">
+						<metric-title>CPU</metric-title>
+						<metric-description class="font-light">
+							<br>utilization of CPU cores
+						</metric-description>	
+					</app-metric>
 				</div>
 				<div class="flex-1">
-				 	<app-metric  
-					 [used] ="cpu.used" 
-					 [available] ="cpu.available">
-					 
-					<metric-title>Memory</metric-title>
-					<br>
-  					<metric-description class="font-light"><br>utilization of memory in GB</metric-description>
+					<app-metric  
+						[used] ="cpu.used" 
+						[available] ="cpu.available">
+						<metric-title>Memory</metric-title>
+						<metric-description class="font-light">
+							<br>utilization of memory in GB
+						</metric-description>
 					 </app-metric>
-				 </div>
-			  </div>
+				</div>
+			</div>
 		</div>
-		<div class="flex-1 py-4 px-4 block w-1/3 pb-5 bg-gray-500 ml-1 mr-2 mt-2 text-gray-700 leading-normal">
-			<p class="title bg-gray-700 py-5 px-5 text-xl bg-gray-800 text-white text-gray-500"> Nodes Details</p>
+		<div class="flex-1 py-4 px-4 block w-1/3 pb-5 bg-gray-500 
+					ml-1 mr-2 mt-2 text-gray-700 leading-normal">
+			<p class="title bg-gray-700 py-5 px-5 text-xl 
+						bg-gray-800 text-white text-gray-500"> 
+						Nodes Details
+			</p>
 			<div class="flex bg-gray-600">
-			<div class=" flex-1 py-2 px-4 mt-2 pt-1 mt-1 py-2 px-4 block w-1/3  leading-normal  pb-5">
-				<div class="mt-1  text-sm">
-					<table app-nodes class="table-fixed border border-gray-500 
+				<div class="flex-1 py-2 px-4 mt-2 pt-1 mt-1 
+							py-2 px-4 block w-1/3  leading-normal  pb-5">
+					<div class="mt-1  text-sm">
+						<table app-nodes 
+									class="table-fixed border border-gray-500 
 											bg-gray-400 w-full  tracking-wide font-light">
-						<tr app-nodes-row *ngFor="let node of cluster1" [node]="node" ></tr>
-					</table>
-				</div>
-				<div class="mt-1 text-sm ">
-					<table app-nodes class="table-fixed border border-gray-500  
-											bg-gray-400 w-full tracking-wide font-light">
-						<tr app-nodes-row *ngFor="let node of cluster2" [node]="node"></tr>
-					</table>
-				</div>
-				<div class="mt-1 text-sm ">
-					<table app-nodes class="table-fixed border border-gray-500  
-											bg-gray-400 w-full tracking-wide font-light">
-						<tr app-nodes-row *ngFor="let node of cluster3" [node]="node"></tr>
-					</table>
+							<tr app-nodes-row *ngFor="let node of cluster1" [node]="node" ></tr>
+						</table>
+					</div>
+					<div class="mt-1 text-sm ">
+						<table app-nodes 
+								class="table-fixed border border-gray-500  
+										bg-gray-400 w-full tracking-wide font-light">
+							<tr app-nodes-row *ngFor="let node of cluster2" [node]="node"></tr>
+						</table>
+					</div>
+					<div class="mt-1 text-sm">
+						<table app-nodes 
+								class="table-fixed border border-gray-500  
+										bg-gray-400 w-full tracking-wide font-light">
+							<tr app-nodes-row *ngFor="let node of cluster3" [node]="node"></tr>
+						</table>
+					</div>
 				</div>
 			</div>
-			</div>
-			 
 		</div>
 	</div>
 </div>

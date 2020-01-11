@@ -17,6 +17,7 @@ import { TopicsComponent } from './components/topics/topics.component';
 import { CountriesComponent } from './components/countries/countries.component';
 import { NodesComponent } from './components/nodes/nodes.component';
 import { NodesRowComponent } from './components/nodes-row/nodes-row.component';
+import { NodeDetailComponent } from './components/node-detail/node-detail.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { NodesRowComponent } from './components/nodes-row/nodes-row.component';
     CountriesComponent,
     NodesComponent,
     NodesRowComponent,
+    NodeDetailComponent,
    
   ],
   imports: [
