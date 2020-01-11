@@ -1,3 +1,17 @@
 {
-	"editor.tabCompletion": "on"
+	"editor.tabCompletion": "on",
+	"editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+	"editor.quickSuggestionsDelay": 50,
+	"editor.formatOnSave": true,
+	"editor.suggest.shareSuggestSelections": true,
+	"css.lint.argumentsInColorFunction": "warning",
+	"css.lint.duplicateProperties": "error",
+	"prettier.packageManager": "yarn",
+	"scss.lint.emptyRules": "ignore",
+	"scss.lint.idSelector": "error",
+	"css.lint.boxModel": "warning",
+	"references.preferredLocation": "view",
+	"scss.lint.argumentsInColorFunction": "warning",
+	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+	"javascript.referencesCodeLens.enabled": true
 }
