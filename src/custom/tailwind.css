@@ -1,51 +1,51 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap&subset=cyrillic,cyrillic-ext,latin-ext');
-body{
-	background-color: #eee;
-	font-family: 'Oswald', sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap&subset=cyrillic,cyrillic-ext,latin-ext");
+body {
+  background-color: #eee;
+  font-family: "Oswald", sans-serif;
 }
 
 .btn {
-    @apply inline-block px-5 py-3 rounded-lg text-sm uppercase tracking-wider font-semibold text-base;
+  @apply inline-block px-5 py-3 rounded-lg text-sm uppercase tracking-wider font-semibold text-base;
 }
 .btn {
-	font-family: 'Oswald', sans-serif;
-  	font-weight: 300;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
 }
 
 .btn:focus {
-    @apply outline-none shadow-outline;
+  @apply outline-none shadow-outline;
 }
 
 .btn-indigo {
-    @apply bg-indigo-500 text-white;
+  @apply bg-indigo-500 text-white;
 }
 
 .btn-indigo:hover {
-    @apply bg-indigo-400;
+  @apply bg-indigo-400;
 }
 
 .btn-indigo:active {
-    @apply bg-indigo-600;
+  @apply bg-indigo-600;
 }
 
 .btn-gray {
-    @apply bg-gray-500 text-gray-800;
+  @apply bg-gray-500 text-gray-800;
 }
 
 .btn-gray:hover {
-    @apply bg-gray-400;
+  @apply bg-gray-400;
 }
 
 .btn-gray:active {
-    @apply bg-gray-600;
+  @apply bg-gray-600;
 }
-.component-title{
-	font-size: 1.5rem;
-	padding: 5px;
-	margin-bottom: 5px;
-	font-weight: 200;
+.component-title {
+  font-size: 1.5rem;
+  padding: 5px;
+  margin-bottom: 5px;
+  font-weight: 200;
 }
 .table-danger {
-    background-color: #940606;
-    color:  #ffffff;
+  background-color: #e26363;
+  color: #ffffff;
 }
