@@ -1,27 +1,28 @@
 <div class=" mt-0 p-0 bg-gray-700">
-	<p class="title bg-gray-700 py-5 px-5 text-xl bg-gray-800 
-				text-white text-gray-500"> 
+	<p class="title bg-gray-700 py-5 px-5 
+				text-xl bg-gray-800 
+				text-white text-gray-500">
 				Metric Component
 	</p>
 	<div class="flex bg-gray-600">
-		<div class=" flex-1 py-2 px-4 mt-2 pt-1 mt-1 
-					py-2 px-4 block w-full  leading-normal  pb-5">
+		<div class=" flex-1 py-2 px-4 mt-2 pt-1 mt-1
+					py-2 px-4 block w-full leading-normal pb-5">
 			<div class="rounded-t-lg border border-gray-600 bg-gray-500">
 				<div class="py-2 px-6 bg-green-800 rounded-t-lg text-white"
-					[ngClass]="{'bg-orange-800': isCritical(), 
+					[ngClass]="{'bg-orange-800': isCritical(),
 								'bg-green-800': !isCritical(),
-								'bg-red-800': isDanger(), 
+								'bg-red-800': isDanger(),
 								'bg-green-800': !isDanger()}">
 					<ng-content select="metric-title"></ng-content>
 				</div>
-				<p class="py-2 px-6 text-gray-700 text-justify"> 
+				<p class="py-2 px-6 text-gray-700 text-justify">
 						{{value}} / {{max}} ({{value / max | percent: '1.0-2'}})
 					<ng-content  select="metric-description"></ng-content>
 				</p>
 				<div class="pb-6 pt-6 ml-2 mr-4"><!-- Progress bar -->
 					<div class=" w-full bg-gray-400">
-						<div class="bg-green-500 text-xs leading-none 
-									py-1 text-center text-white" 
+						<div class="bg-green-500 text-xs leading-none
+									py-1 text-center text-white"
 							[ngStyle]="{'width': value / max| percent: '1.0-2' }">
 										{{value / max | percent: '1.0-2'}}
 						</div>
